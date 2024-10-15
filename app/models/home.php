@@ -1,3 +1,4 @@
+<?php require "../db/config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -25,6 +26,50 @@
          
          </div>
       </div>
+
+      <section class="home">
+
+         <h2 class="heading-title">Boxing is not just a sport it is a way of life</h2>
+
+         <div class="box-container">
+
+         <div class="boxing">
+               <div class="image">
+                  <img src="/<?= IMAGES_URL ?>ali.jpg" alt="Ali8">
+
+               </div>
+            </div>
+
+            <div class="boxing">
+               <div class="image">
+                  <img src="/<?= IMAGES_URL ?>ali-2.jpg" alt="Ali">
+
+               </div>
+            </div>
+
+            <div class="boxing">
+               <div class="image">
+                  <img src="/<?= IMAGES_URL ?>ali-3.jpg" alt="Ali">
+               </div>
+            </div>
+
+            <div class="boxing">
+               <div class="image">
+                  <img src="/<?= IMAGES_URL ?>ali-4.jpg" alt="Ali">
+               </div>
+            </div>
+
+         </div>
+
+         <div class="content">
+            <h3>up to 25% off</h3>
+            <p>Book now and you will get discount</p>
+            <p>Or Invite a friend you will also get a discount</p>
+            <a href="booking.php" class="btn">Book now</a>
+         </div>
+
+
+      </section>
 
 
 
