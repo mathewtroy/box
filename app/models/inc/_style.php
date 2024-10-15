@@ -10,13 +10,10 @@
 
 
    <!-- Custom main css file link  -->
-   <link rel="stylesheet" href="static/css/style.css"> 
+   <link rel="stylesheet" href="/<?= CSS_URL ?>style.css"> 
 
    <!-- Custom footer css file link  -->
-   <link rel="stylesheet" href="static/css/style-footer.css">
+   <link rel="stylesheet" href="/<?= CSS_URL ?>style-footer.css">
 
    <!-- Media queries  -->
-   <link rel="stylesheet" href="static/css/media.css">  
-
-   <!-- Media print -->
-   <link rel="stylesheet" href="static/css/print.css"> 
+   <link rel="stylesheet" href="/<?= CSS_URL ?>media.css">  
