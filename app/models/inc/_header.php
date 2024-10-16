@@ -31,16 +31,16 @@
       <!-- 
       Authorized users see Log Out page
       -->
-      <a href="logout.php">Log out</a>
+      <a href="../controllers/logout.php">Log out</a>
 
                <?php if(isset($_SESSION['admin_name'])): ?>
 
-               <a href="admin_page.php">Personal account</a>
+               <a href="../models/admin_page.php">Personal account</a>
                
                <?php else: ?>
                   
                   <!-- if(isset($_SESSION['user_name'])): -->
-                  <a href="user_page.php">Personal account</a>
+                  <a href="../models/user_page.php">Personal account</a>
                
                <?php endif; ?>
          
