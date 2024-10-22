@@ -4,7 +4,7 @@
 require "../db/config.php";
 
 // import Validation from PHP file
-// @require "lib/validate.php";
+require "../models/lib/validate.php";
 
 
 // The values entered by the user are not lost.
@@ -38,18 +38,18 @@ if($formIsSent) {
    $result_login = mysqli_query($conn, $select_login);
 
 
-//    $validateLoginMin = valLoginMin($login);
-//    $validateLoginMax = valLoginMax($login);
-//    $validateLoginPattern = valLoginPattern($login);
+   $validateLoginMin = valLoginMin($login);
+   $validateLoginMax = valLoginMax($login);
+   $validateLoginPattern = valLoginPattern($login);
 
-//    $validateNameMin = valNameMin($firstname);
-//    $validateNameMax = valNameMax($firstname);
-//    $validateNamePattern = valNamePattern($firstname);
+   $validateNameMin = valNameMin($firstname);
+   $validateNameMax = valNameMax($firstname);
+   $validateNamePattern = valNamePattern($firstname);
 
-//    $validateEmailAll = valEmailAll($email);
+   $validateEmailAll = valEmailAll($email);
 
-//    $validatePasswordMin = valPasswordMin($pass);
-//    $validatePasswordMax = valPasswordMax($pass);
+   $validatePasswordMin = valPasswordMin($pass);
+   $validatePasswordMax = valPasswordMax($pass);
 
    // Check unique email address
    if(mysqli_num_rows($result) > 0){
@@ -74,7 +74,7 @@ if($formIsSent) {
             mysqli_query($conn, $insert);
             // everything is OK, I can work with data
             // perhaps create a new user in the DB
-            header('location:login.php');
+            header('location:../models/login.php');
             // exit;
          }
          else {

@@ -1,10 +1,8 @@
 <?php
-session_start();
-
 require "../db/config.php";
 
 // import Validation from PHP file
-// @require "lib/val_login.php";
+require "../models/lib/val_login.php";
 
 
 $loginFormIsSent =  isset($_POST['do_login']);
@@ -43,12 +41,12 @@ if($loginFormIsSent) {
       $num_pass = mysqli_num_rows($result_password);
 
    // Start
-    //   $validateLoginMin = valLoginMin($login);
-    //   $validateLoginMax = valLoginMax($login);
-    //   $validateLoginPattern = valLoginPattern($login);
+      $validateLoginMin = valLoginMin($login);
+      $validateLoginMax = valLoginMax($login);
+      $validateLoginPattern = valLoginPattern($login);
 
-    //   $validatePasswordMin = valPasswordMin($pass);
-    //   $validatePasswordMax = valPasswordMax($pass);
+      $validatePasswordMin = valPasswordMin($pass);
+      $validatePasswordMax = valPasswordMax($pass);
 
    if ($validateLoginMin && $validateLoginMax && $validateLoginPattern
       && $validatePasswordMin && $validatePasswordMax) {
@@ -66,13 +64,13 @@ if($loginFormIsSent) {
       
                      $_SESSION['admin_name'] = $row['firstname'];
                      // redirect to Admin page
-                     header('location:admin_page.php');
+                     header('location:../models/admin_page.php');
             
                   }elseif($row['user_type'] == 'user'){
             
                      $_SESSION['user_name'] = $row['firstname'];
                      // redirect to User page
-                     header('location:user_page.php');
+                     header('location:../models/user_page.php');
                      
                   }
                }

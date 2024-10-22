@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require "../db/config.php";
 
 if(!isset($_SESSION['admin_name'])){
