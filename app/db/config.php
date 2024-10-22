@@ -1,6 +1,6 @@
 <?php
 // config.php
-
+session_start();
 //  Path to public resources
 define('PUBLIC_URL', 'public/');
 
