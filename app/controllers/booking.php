@@ -1,4 +1,50 @@
-<?php require "../db/config.php"; ?>
+<?php 
+require "../db/config.php"; 
+// import Validation from PHP file
+require "../models/lib/val_book.php";
+
+$name_b = '';
+$email_b = '';
+$phone = '';
+$reservation = '';
+
+
+$bookFormIsSent = isset($_POST['do_send']);
+
+if($bookFormIsSent) {
+
+   $name_b = $_POST['name_b'];
+   $email_b = $_POST['email_b'];
+   $phone = $_POST['phone'];
+   $reservation = $_POST['reservation'];
+
+
+   $validateNameBookMin = valNameBookMin($name_b);
+   $validateNameBookMax = valNameBookMax($name_b);
+   $validateNameBookPattern = valNameBookPattern($name_b);
+   $validateEmailBookPattern = valBookEmailAll($email_b);
+   $validateStartPhone = valStartPhone($phone);
+
+   if ($validateNameBookMin && $validateNameBookMax && $validateNameBookPattern 
+   && $validateEmailBookPattern && $validateStartPhone) {
+      // everything is OK, I can work with data
+      // perhaps create a new user in the DB
+      $request = " INSERT INTO book_form(name_b, email_b, phone, address, location, guests, arrivals, days) 
+      VALUES('$name_b','$email_b','$phone','$address','$location','$guests','$arrivals','$days') ";
+      mysqli_query($conn, $request);
+
+      header('location:book.php');
+   } else {
+         // error, I stop at the form and display errors
+   }
+
+
+// }else{
+//    echo 'Something went wrong please try again!';
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -11,7 +57,7 @@
       <?php require "../models/inc/_style.php" ?>
 
    </head>
-
+    
    <body>
 
         <!-- Import header section from PHP file -->

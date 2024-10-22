@@ -130,12 +130,6 @@
          <span class="error"></span>
 
       </div>
-
-
-         
-         <!-- CSRF -->
-         <input type="hidden" name="token" value="<?=$_SESSION['token'];?>" >
-
          <input type="submit" name="do_send" value="Send booking" class="btn">
       </div>
 
