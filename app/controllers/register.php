@@ -1,23 +1,10 @@
 <?php
-
-// DB connection
 require "../db/config.php";
-
-// import Validation from PHP file
 require "../models/lib/validate_data.php";
-
-
-// The values entered by the user are not lost.
-// An incorrectly completed form will be rejected and returned for correction. 
-// All data will remain pre-filled. The only exception is password fields.
-// value="<?= htmlspecialchars($login); >"
-// value="<?= htmlspecialchars($firstname); >"
-// value="<?= htmlspecialchars($email); >"
 
 $login = '';
 $firstname = '';
 $email = '';
-
 $formIsSent =  isset($_POST['do_reg']);
 
 if($formIsSent) {
@@ -37,17 +24,13 @@ if($formIsSent) {
    $result = mysqli_query($conn, $select);
    $result_login = mysqli_query($conn, $select_login);
 
-
    $validateLoginMin = valLoginMin($login);
    $validateLoginMax = valLoginMax($login);
    $validateLoginPattern = valLoginPattern($login);
-
    $validateNameMin = valNameMin($firstname);
    $validateNameMax = valNameMax($firstname);
    $validateNamePattern = valNamePattern($firstname);
-
    $validateEmailAll = valEmailAll($email);
-
    $validatePasswordMin = valPasswordMin($pass);
    $validatePasswordMax = valPasswordMax($pass);
 
@@ -94,19 +77,14 @@ if($formIsSent) {
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>register form</title>
-
-      <!-- Import CSS section from PHP file -->
       <?php require "../models/inc/_style.php" ?>
-
    </head>
 
    <body>
-      
          <!-- Import register form from PHP file -->
          <?php require "../views/register_form.php" ?>
 
          <!-- Validate Registration form JS-file -->
          <script src="../<?=JS_URL?>register.js"></script>
-
    </body>
 </html>

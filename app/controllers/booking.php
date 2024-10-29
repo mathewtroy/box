@@ -1,14 +1,11 @@
 <?php 
 require "../db/config.php"; 
-// import Validation from PHP file
 require "../models/lib/validate_booking.php";
 
 $name_b = '';
 $email_b = '';
 $phone = '';
 $reservation = '';
-
-
 $bookFormIsSent = isset($_POST['do_send']);
 
 if($bookFormIsSent) {
@@ -60,33 +57,26 @@ if($bookFormIsSent) {
     
    <body>
 
-        <!-- Import header section from PHP file -->
-        <?php require "../models/inc/_header.php" ?>
+      <!-- Import header section from PHP file -->
+      <?php require "../models/inc/_header.php" ?>
 
-        <div class="main">
-            
-            <!-- background of about -->
-            <div class="heading-home"> 
-                
-                <h1>Booking</h1>
-            
-            </div>
-        </div>
+      <div class="main">
+         <div><h1>Booking</h1></div>
+      </div>
 
-        <section class="home">
+      <section class="home">
 
-            <h2 class="heading-title">Boxing is not just a sport it is a way of life</h2>
-
-            <div class="box-container">
+         <h2>Boxing is not just a sport it is a way of life</h2>
 
 
-        </section>
 
-        <!-- Import booking section from PHP file -->
-        <?php require "../views/booking_form.php" ?>
+      </section>
 
-        <!-- Import footer section from PHP file -->
-        <?php require "../models/inc/_footer.php" ?>
+      <!-- Import booking section from PHP file -->
+      <?php require "../views/booking_form.php" ?>
+
+      <!-- Import footer section from PHP file -->
+      <?php require "../models/inc/_footer.php" ?>
 
    </body>
 </html>
