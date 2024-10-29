@@ -510,7 +510,7 @@ h2.comments{
 }
 
 h4.date-name {
-    color: var(--dark-blue);
+    color: green;
     font-size: 2.1rem;
     font-weight: bold;
     text-align: center;

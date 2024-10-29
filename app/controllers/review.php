@@ -52,8 +52,7 @@ if ($commentIsSent) {
 
         <section class="review">
 
-            <?php if (isset($_SESSION['user_name']) 
-            || isset($_SESSION['admin_name']) ): ?>
+            <?php if (isset($_SESSION['user_name']) || isset($_SESSION['admin_name']) ): ?>
 
             <!-- Import register form from PHP file -->
             <?php require "../views/review_form.php" ?>
