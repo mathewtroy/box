@@ -14,7 +14,7 @@ require "../models/lib/validate_comment.php";
 
         // $sender = $_POST['sender'];
 
-        if (isset($_SESSION['expert_name'])) $sender = $_SESSION['expert_name'] ;
+        if (isset($_SESSION['admin_name'])) $sender = $_SESSION['admin_name'] ;
 
         elseif (isset($_SESSION['user_name'])) $sender = $_SESSION['user_name'] ;
 
