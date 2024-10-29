@@ -14,17 +14,10 @@
 
    <body>
 
-      <!-- Import header section from PHP file -->
       <?php require "inc/_header.php" ?>
 
       <div class="main">
-        
-         <!-- background of about -->
-         <div class="heading-home"> 
-            
-            <h1>Home</h1>
-         
-         </div>
+         <div><h1>Home</h1></div>
       </div>
 
       <section class="home">
@@ -65,9 +58,6 @@
 
       </section>
 
-
-
-      <!-- Import footer section from PHP file -->
       <?php require "inc/_footer.php" ?>
 
    </body>
