@@ -2,7 +2,7 @@
 require "../db/config.php";
 
 // import Validation from PHP file
-require "../models/lib/val_login.php";
+require "../models/lib/validate_data.php";
 
 
 $loginFormIsSent =  isset($_POST['do_login']);

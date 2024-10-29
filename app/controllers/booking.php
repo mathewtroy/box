@@ -1,7 +1,7 @@
 <?php 
 require "../db/config.php"; 
 // import Validation from PHP file
-require "../models/lib/val_book.php";
+require "../models/lib/validate_booking.php";
 
 $name_b = '';
 $email_b = '';
@@ -29,8 +29,8 @@ if($bookFormIsSent) {
    && $validateEmailBookPattern && $validateStartPhone) {
       // everything is OK, I can work with data
       // perhaps create a new user in the DB
-      $request = " INSERT INTO book_form(name_b, email_b, phone, address, location, guests, arrivals, days) 
-      VALUES('$name_b','$email_b','$phone','$address','$location','$guests','$arrivals','$days') ";
+      $request = " INSERT INTO book_form(name_b, email_b, phone, reservation) 
+      VALUES('$name_b','$email_b','$phone','$reservation') ";
       mysqli_query($conn, $request);
 
       header('location:book.php');

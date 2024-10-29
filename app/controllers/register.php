@@ -4,7 +4,7 @@
 require "../db/config.php";
 
 // import Validation from PHP file
-require "../models/lib/validate.php";
+require "../models/lib/validate_data.php";
 
 
 // The values entered by the user are not lost.
@@ -74,7 +74,7 @@ if($formIsSent) {
             mysqli_query($conn, $insert);
             // everything is OK, I can work with data
             // perhaps create a new user in the DB
-            header('location:../models/login.php');
+            header('location:../controllers/login.php');
             // exit;
          }
          else {

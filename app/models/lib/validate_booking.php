@@ -1,8 +1,4 @@
 <?php
-
-// Check Name
-
-
     /**
      * 
      * Get string length.
@@ -18,7 +14,6 @@
     function valNameBookMin ($name_b) {
         return strlen($name_b) >= 2;
     }
-
 
     /**
      * 
@@ -36,7 +31,6 @@
         return strlen($name_b) <= 20;
     }
 
-
     /**
      * 
      * Get value of string
@@ -52,10 +46,6 @@
     function valNameBookPattern ($name_b) {
         return preg_match("/^[a-zA-Z]*$/", $name_b);
     }
-
-/*-----------------------------------------------------------------------------*/
-// Check Email
-
 
     /**
      * 
@@ -74,7 +64,6 @@
     return true;
     }
 
-
     /**
      * 
      * Get value of string.
@@ -92,15 +81,5 @@
         &&($phone < 800000000)
         &&(strlen($phone) == 9));
     }
-
-
-/*-----------------------------------------------------------------------------*/
-// Check reservation
-// Only date format
-// You cannot use the date from Past
-// Only actual date format from Today
-// Validate with pattern and PHP function
-// min="< ?= date('Y-m-d') ? >"
-
 
 ?>

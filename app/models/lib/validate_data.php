@@ -1,5 +1,4 @@
 <?php
-
     /** 
      * 
      * Get string length.
@@ -15,7 +14,6 @@
     function valLoginMin ($login) {
         return strlen($login) >= 4;
     }
-
 
     /** 
      * 
@@ -33,7 +31,6 @@
         return strlen($login) <= 20;
     }
 
-
     /**
      * 
      * Get value of string
@@ -49,10 +46,6 @@
     function valLoginPattern($login) {
         return preg_match("/^[a-z0-9]*$/", $login);
     }
-
-
-// Check Name
-
 
     /**
      * 
@@ -70,7 +63,6 @@
         return strlen($firstname) >= 2;
     }
 
-
     /**
      * 
      * Get string length.
@@ -87,7 +79,6 @@
         return strlen($firstname) <= 20;
     }
 
-
     /**
      * 
      * Get value of string
@@ -103,10 +94,6 @@
     function valNamePattern ($firstname) {
     return preg_match("/^[a-zA-Z]*$/", $firstname);
     }
-
-
-// Check Email
-
 
     /**
      * 
@@ -125,10 +112,6 @@
     return true;
     }
 
-
-// Check Password
-
-
     /**
      * 
      * Get string length.
@@ -144,7 +127,6 @@
     function valPasswordMin ($pass) {
         return strlen($pass) >= 6;
     }
-
     
     /**
      * 
