@@ -119,29 +119,12 @@ section {
    Home style
 */
 
-.heading-home {
-   background-size: cover !important;
-   background-position: center !important;
-   padding-top: 9rem;
-   padding-bottom: 15rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background: url("../img/bg/home3.jpg") ;
-}
-
-.home {
-   background-image: url("../img/bg/all.jpg");
-   background-size: cover;
-   background-position: center;
-}
-
-.home h2.heading-title {
+h2 {
    color:var(--main-color);
    font-size: 3rem;
    padding-bottom: 2rem;
    text-align: center;
-}
+} 
 
 h1 {
    font-size: 9rem;
@@ -230,36 +213,6 @@ h1 {
    About style
 */
 
-.heading-about {
-    background-size: cover !important;
-    background-position: center !important;
-    padding-top: 9rem;
-    padding-bottom: 15rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url("../img/bg/all-2.jpg") ;
-}
-
-.about {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap:3rem;
-    
-    background-image: url("../img/bg/all.jpg");
-    background-size: cover;
-    background-position: center;
-    
-}
-
-.about h2.heading-title {
-    color:var(--main-color);
-    font-size: 3rem;
-    padding-bottom: 2rem;
-    text-align: center;
-}
-
 .about .image {
     flex:1 1 40rem;
 }
@@ -313,30 +266,6 @@ h1 {
  /*---------------------------------------------------------------------
    Booking style
 */
-
-.heading-book {
-    background-size: cover !important;
-    background-position: center !important;
-    padding-top: 9rem;
-    padding-bottom: 15rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url("../img/bg/book2.jpg") ;
-}
-
-.booking {
-    background-image: url("../img/bg/all.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.booking h2.heading-title {
-    color:var(--main-color);
-    font-size: 3rem;
-    padding-bottom: 2rem;
-    text-align: center;
-}
 
 .booking h2 {
     color:var(--black);
@@ -547,7 +476,62 @@ label {
     font-size: 9px;
     height: 13px;
 }
- 
+
+
+/*---------------------------------------------------------------------
+   Comments style
+*/
+
+.comments {
+    text-align: center;
+    padding: 2rem;
+}
+
+textarea {
+    border: 2px solid;
+    resize: none;
+    word-break: break-all;
+}
+
+h2.comments{
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+.content {
+    text-align: center;
+}
+
+
+.content p {
+    word-wrap: break-word;
+    font-weight: bold;
+    padding: 1.5rem;
+}
+
+h4.date-name {
+    color: var(--dark-blue);
+    font-size: 2.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.sender-name {
+    color: var(--dark-green);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+}
+
+p.message-name {
+    color: var(--orange);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+
 
 /*---------------------------------------------------------------------
    Users personal page style

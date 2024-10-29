@@ -43,12 +43,12 @@
 
         <div class="box">
             <h3>Contact Info</h3>
-            <a href="tel:+420444333222"> <i class="fas fa-phone">
+            <a href="tel:+420776756746"> <i class="fas fa-phone">
             </i> Phone Number </a>
             <a href="mailto:krossale@fel.cvut.cz"> <i class="fas fa-envelope">
             </i> Email </a>
-            <a href="https://www.facebook.com/kro63/">
-                <i class="fab fa-facebook"></i> Facebook </a>
+            <a href="https://www.github.com/mathewtroy/">
+                <i class="fab fa-github"></i> Github </a>
             <a href="https://t.me/troy102102/"> 
                 <i class="fab fa-telegram"></i> Telegram </a>
             <a href="https://www.linkedin.com/in/aleksandrkross/">
