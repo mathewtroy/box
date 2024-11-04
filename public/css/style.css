@@ -6,6 +6,7 @@
    --main-color:#5d1f78;
    --black:#222;
    --white:#fff;
+   --azure:#2d94cf;
    --light-black:#777;
    --light-white:#fff9;
    --dark-bg:rgba(0, 0, 0, 0.8);
@@ -67,6 +68,7 @@ section {
     font-size: 1.7rem;
     padding: 1rem 3rem;  
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .btn:hover {
@@ -86,16 +88,6 @@ section {
     justify-content: space-between;
 }
 
-.header strong {
-    font-size: 2rem;
-    color: #2792c0;
-}
-
-.header .logo {
-    font-size: 1.5rem;
-    color: var(--black);
-}
-
 .header .navbar a {
     font-size: 2rem;
     margin-left: 2rem;    
@@ -113,8 +105,8 @@ section {
     color: var(--black);
     display: none;
 }
-
  
+
 /*---------------------------------------------------------------------
    Home style
 */
@@ -136,134 +128,118 @@ h1 {
    text-align: center;
 }
 
-.home {
-   padding: 0;
-}
-
-
 .home .box-container {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap: 2rem;
 }
 
-.home .box-container .box .image img {
+.home .box-container .boxing img {
    width: 110%;
    height: 110%;
    object-fit: cover;
    transform: scale(1.1); 
 }
 
-.home .box-container .box:hover .image img {
+.home .box-container .boxing:hover img {
    width: 100%;
    height: 100%;
    object-fit: cover;
    transform: scale(0.95); 
+   border:var(--border);
+   border-radius: 2px;
 }
 
-.home .box-container .box .image {
+.home .box-container .boxing .image {
    height: 30rem;
    overflow: hidden;
 }
 
-.home .box-container .box .content {
-   padding: 2rem;
-   text-align: center;
-}
-
-.home .box-container .box{
-   border:var(--border);
-   box-shadow: var(--box-shadow);
-   background: var(--white);
-   display: none;
-}
-
-.home .box-container .box:nth-child(1),
-.home .box-container .box:nth-child(2),
-.home .box-container .box:nth-child(3),
-.home .box-container .box:nth-child(4) {
+.home .box-container .boxing:nth-child(1),
+.home .box-container .boxing:nth-child(2),
+.home .box-container .boxing:nth-child(3),
+.home .box-container .boxing:nth-child(4) {
    display: inline-block;
 }
-
-.home .content {
-   text-align: center;
-}
-
-.home .content {
-   max-width:70rem;
-   margin:0 auto;
-}
-
-.home .content h3 {
-   font-size: 3.5rem;
-   text-transform: uppercase;
-   color:var(--main-color);
-}
-
-.home .content p {
-   font-size: 3rem;
-   color:var(--light-white);
-   line-height: 2;
-   padding:1rem 0;
-}
-
 
 
 /*---------------------------------------------------------------------
    About style
 */
 
-.about .image {
-    flex:1 1 40rem;
-}
-
-.about .content {
+.about.content {
     flex:1 1 40rem;
     text-align: center;
 }
 
-.about .content h3 {
+.about.content h2 {
     font-size: 18pt;
     color:var(--black);
     text-transform: none;
 }
 
-.about .content p {
+.about.content p {
     font-size: 14pt;
     color:var(--light-black);
     line-height: 2;
     padding:1rem 0;
 }
 
-.about .content .icons-container {
-    margin-top: 15pt; 
-    display: flex;
-    flex-wrap: wrap;
-    gap:1.5rem;
-    align-items: flex-end;
+
+/*---------------------------------------------------------------------
+   Review style
+*/
+
+.comments {
+    text-align: center;
+    padding: 2rem;
 }
 
-.about .content .icons-container .icons {
-    background: var(--light-bg);  
-    padding:2rem;
-    flex:1 1 16rem;
+textarea {
+    border: 2px solid;
+    resize: none;
+    word-break: break-all;
 }
 
-.about .content .icons-container .icons i {
-    font-size: 5rem;
-    margin-bottom: 2rem; 
-    color:var(--main-color);
+h2.comments{
+    font-size: 2.5rem;
+    margin: 1rem;
 }
 
-.about .content .icons-container .icons a {
+.content {
+    text-align: center;
+}
+
+.content p {
+    word-wrap: break-word;
     font-weight: bold;
-    font-size: 2rem;
-    color:#00551c;
-    display:block;
+    padding: 1.5rem;
 }
- 
- 
- /*---------------------------------------------------------------------
+
+h4.date-name {
+    color: green;
+    font-size: 2.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.sender-name {
+    color: var(--dark-green);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+}
+
+p.message-name {
+    color: var(--azure);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+
+/*---------------------------------------------------------------------
    Booking style
 */
 
@@ -271,9 +247,10 @@ h1 {
     color:var(--black);
 }
 
-.booking p.not-user {
-    font-size: 3rem;
-    color:var(--light-white);
+.booking p.nonuser {
+    font-size: 2rem;
+    text-align: center;
+    color:var(--azure);
     line-height: 2;
     padding:1rem 0;
     font-weight: bold;
@@ -293,8 +270,6 @@ h1 {
     margin-right: auto;
 }
  
- 
-
 label.inputBox {
     width:380px;
     text-align: center; 
@@ -307,7 +282,6 @@ label.inputBox {
     font-size: 1.6rem;
     color:var(--black);
     margin-top: 10pt;  
-    /* border:var(--border); */
 } 
 
 .form-control p {
@@ -316,12 +290,10 @@ label.inputBox {
     color:rgb(2, 11, 41);
 }
 
-
-
 .form-container .btn {
-    background: #777;
+    background: #ffe5b4;
+    color:#080300;
     font-weight: bold;
-    color: #0a0452;
     margin-top: 30pt; 
     font-size: 2rem;
 }
@@ -329,12 +301,11 @@ label.inputBox {
 .form-container :hover.btn {
     background: #00551c;
     font-weight: bold;
-    color: black;
+    color: var(--white);
     font-size: 2rem;
- 
 }
  
- 
+
 /*---------------------------------------------------------------------
     Form container style
 */
@@ -351,8 +322,8 @@ label.inputBox {
 
 .form-container form {
     padding:20px;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 20px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
     background: #fff;
     text-align: center;
     width: 500px;
@@ -368,14 +339,13 @@ label.inputBox {
 label {
     /* display: inline; */
     font-weight: bold;
-    color:rgb(150, 7, 150);
+    color:rgb(58, 5, 155);
     /* width: 100%; */
     /* padding:10px 15px; */
     font-size: 17px;
     margin:8px 0;
     border-radius: 2px;
 }
- 
  
  
 /*---------------------------------------------------------------------
@@ -387,8 +357,8 @@ label {
     padding:10px 15px;
     font-size: 17px;
     margin:10px 0;
-    background: #eee;
-    border-radius: 2px;
+    background: #eeeeee;
+    border-radius: 10px;
 }
 
 .form-container form select{
@@ -397,7 +367,7 @@ label {
     font-size: 17px;
     margin:10px 0;
     background: #eee;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .form-container form select option{
@@ -408,6 +378,7 @@ label {
     background: #ffe5b4;
     color:#080300;
     text-transform: capitalize;
+    font-weight: bold;
     font-size: 20px;
     cursor: pointer;
 }
@@ -421,8 +392,9 @@ label {
 .form-container form p.inform{
     margin-top: 10px;
     font-size: 20px;
-    color:green;
-    font-size: 1.2rem;
+    color: var(--azure);
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .form-container form p.redirect{
@@ -478,68 +450,13 @@ label {
 }
 
 
-/*---------------------------------------------------------------------
-   Comments style
-*/
-
-.comments {
-    text-align: center;
-    padding: 2rem;
-}
-
-textarea {
-    border: 2px solid;
-    resize: none;
-    word-break: break-all;
-}
-
-h2.comments{
-    font-size: 2.5rem;
-    margin: 1rem;
-}
-
-.content {
-    text-align: center;
-}
-
-
-.content p {
-    word-wrap: break-word;
-    font-weight: bold;
-    padding: 1.5rem;
-}
-
-h4.date-name {
-    color: green;
-    font-size: 2.1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-p.sender-name {
-    color: var(--dark-green);
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 1rem;
-}
-
-p.message-name {
-    color: var(--orange);
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 2.5rem;
-}
-
 
 /*---------------------------------------------------------------------
    Users personal page style
 */
 
 .container{
-    background: rgb(147, 160, 184);
-    /* фон страницы пользователя */
+    background: #eee;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -578,22 +495,65 @@ p.message-name {
     margin-bottom: 20px;
 }
 
+.container .content a {
+    display: block; 
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(70, 30, 70);
+    margin: 10px 0; 
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container .content a:hover {
+    color: #333; 
+    font-weight: bold;
+    text-decoration: underline; 
+}
+
 .container .content .btn{
     display: inline-block;
     padding:10px 30px;
     font-size: 20px;
-    background: #333;
-    color:#fff;
+    background: #ffe5b4;
+    color:#080300;
     margin:0 5px;
     text-transform: capitalize;
 }
 
 .container .content .btn:hover{
-    background: rgb(70, 30, 70);
+    background: #00551c;
+    font-weight: bold;
+    color: var(--white);
+    font-size: 2rem;
 }
- 
- 
+  
 .users {
     text-align: center;
 }
- 
+
+.delete-button {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 40px; 
+}
+
+#delete_comment{
+    display: inline-block;
+    padding:10px 30px;
+    font-size: 20px;
+    background: #ffe5b4;
+    color:#080300;
+    margin:0 5px;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+#delete_comment:hover {
+    background: #00551c;
+    font-weight: bold;
+    color: var(--white);
+    font-size: 2rem;
+    border-radius: 10px;
+}
