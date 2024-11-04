@@ -11,8 +11,8 @@
                     characters</p>
                 <textarea 
                     name="message" 
-                    rows="8" 
-                    cols="30"
+                    rows="10" 
+                    cols="50"
                     minlength="5" 
                     maxlength="202" 
                     placeholder="Write a comment* (Required)" 

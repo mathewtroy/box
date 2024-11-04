@@ -1,7 +1,22 @@
 <?php
 require "../db/config.php";
 require "../models/lib/validate_comment.php";
-   
+
+
+if (isset($_POST['delete_comment'])) {
+    $comment_id = $_POST['comment_id'];
+
+    // Удаление комментария из базы данных
+    $delete_sql = "DELETE FROM comments WHERE comment_id = ?";
+    $stmt = $conn->prepare($delete_sql);
+    $stmt->bind_param("i", $comment_id);
+    $stmt->execute();
+
+    // Перенаправление на страницу после удаления
+    header("Location: ../controllers/review.php");
+    exit();
+}
+
 // $sender ='';
 $message = '';
 $commentIsSent = isset($_POST['post_comment']);
@@ -75,7 +90,23 @@ if ($commentIsSent) {
             <p class="sender-name"><?php echo 'user: ',$row['sender'];?></p>
             <p class="message-name"><?php echo $row['message'];?></p>
 
-        <?php }} ?>
+            <div class="delete-button">
+                <!-- For Admins "Delete" -->
+                <?php if (isset($_SESSION['admin_name'])): ?>
+                    <form 
+                    method="POST" 
+                    action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+                        <input type="hidden" name="comment_id" 
+                        value="<?php echo $row['comment_id']; ?>">
+
+                        <button type="submit" name="delete_comment" 
+                        id="delete_comment">Delete</button>
+                    </form>
+                <?php endif; ?>
+
+            </div>
+
+        <?php }} ?> 
 
         <?php require "../models/inc/_footer.php" ?>
 
