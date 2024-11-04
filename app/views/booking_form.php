@@ -5,9 +5,7 @@
    <h2 class="heading-title">Reserve personal training now</h2>
 
 <!-- For non-users -->
-      <!-- 
-      Unauthorized users see Login page , Register Page
-      -->
+      <!--  Unauthorized users see Login page , Register Page -->
       <?php if (!isset($_SESSION['user_name']) && !isset($_SESSION['admin_name']) ): ?>
          
       <p class="nonuser">If you have a profile in this website, 
@@ -20,9 +18,6 @@
 <!-- For USERS -->
 
       <!--  Authorized users see Log Out page -->
-
-
-<!-- <div > -->
 
    <div class="form-container">
    <form 
@@ -73,8 +68,7 @@
          required pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
          id="email_b">
          <span class="error"></span>
-<!-- 
- -->
+
          <?php
                if (isset($validateEmailBookPattern) && $validateEmailBookPattern == false) {
                   echo '<span class="error">Provide a valid email address, 
@@ -129,16 +123,10 @@
          <input type="submit" name="do_send" value="Send booking" class="btn">
       </div>
 
-
-      <!-- CSRF -->
-
-
    </form>
    </div>
 
    <?php endif; ?>
-   <!-- </div>    -->
-
 </section>
 
 <!-- Booking section ends -->
