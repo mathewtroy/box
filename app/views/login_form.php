@@ -1,7 +1,4 @@
 <div class="form-container">
-
-<!-- action="#" -->
-<!-- <php echo htmlspecialchars($_SERVER['PHP_SELF']) ?> -->
    <form  
       action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>"  
       class="login_form"
@@ -11,9 +8,7 @@
       <h3>login now</h3>
 
       <?php
-         if(isset($error)) {
-            echo '<span class="error-msg">'.$error.'</span>';
-         };
+         if(isset($error)) { echo '<span class="error-msg">'.$error.'</span>';};
       ?>
 
       <div class="form-control">
@@ -27,9 +22,6 @@
          placeholder="Enter login (Required)" 
          required pattern ='[a-z0-9].{3,19}'
          id="login">
-         <div>
-            <p>Suggestions: <span class="ajax" id="txtHint"></span></p>
-         </div>
          <span class="error"></span>
         
          <?php
@@ -46,9 +38,7 @@
                   Latin alphabets and numbers</span>';
                }
          ?>
-
       </div>
-
 
       <div class="form-control">
          <label for="password">Password</label>
@@ -69,23 +59,11 @@
                if (isset($validatePasswordMax) && $validatePasswordMax == false) {
                   echo '<span class="error">Password must be no more than 60 characters</span>';
                }
-   
          ?>
       </div>
 
-<!-- 
-   
-   CSRF it works
-
-   If hacker wants to to CSRF attack we prevent it.
-   Not CSRF, no problem..
-
--->
-
-
       <input type="submit" name="do_login" value="login now" class="form-btn">
       
-
       <p class="redirect">Do not have an account? 
          <a href="../controllers/register.php">
             <i class="fas fa-user-plus"></i> Register</a>
@@ -96,6 +74,5 @@
          <i class="fas fa-home"></i> Home</a>
       </p>
    </form>
-
 
 </div>

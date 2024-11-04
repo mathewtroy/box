@@ -43,9 +43,7 @@
                   Latin alphabets and numbers</span>';
                }
          ?>
-
       </div>
-
 
       <div class="form-control">
          <label for="firstname">Firstname</label>
@@ -75,9 +73,7 @@
                   alphabets</span>';
                }    
          ?>
-
       </div>
-
 
       <div class="form-control">
          <label for="email">Email</label>
@@ -98,7 +94,6 @@
                }
          ?>
       </div>
-
 
       <div class="form-control">
          <label for="password">Password</label>
@@ -122,9 +117,7 @@
                   characters</span>';
                }    
          ?>
-
       </div>
-
 
       <div class="form-control">
          <label for="password">Password check</label>
@@ -135,9 +128,7 @@
          required pattern = '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,60}'
          id="cpassword">
          <span class="error"></span>
-  
       </div>
-
 
       <div class="form-control"> 
          <label>Type of user</label>
@@ -146,7 +137,6 @@
             <option value="admin">Admin</option>
          </select>
       </div>
-
 
       <input type="submit" name="do_reg" value="register now" class="form-btn">
       
@@ -160,5 +150,4 @@
          <i class="fas fa-home"></i> Home</a>
       </p>
    </form>
-
 </div>
