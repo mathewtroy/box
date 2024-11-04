@@ -2,9 +2,7 @@
 
 <section class="booking">
 
-   <h2 class="heading-title">Reserve now</h2>
-
-<!--TODO  -->
+   <h2 class="heading-title">Reserve personal training now</h2>
 
 <!-- For non-users -->
       <!-- 
@@ -12,8 +10,8 @@
       -->
       <?php if (!isset($_SESSION['user_name']) && !isset($_SESSION['admin_name']) ): ?>
          
-      <p class="not-user">If you have a profile in this website, 
-         you can create a reservation.
+      <p class="nonuser">If you have a profile in this website, 
+         you can create a reservation for training.
          To do this, log into your account.
       </p>
       
@@ -21,9 +19,7 @@
 
 <!-- For USERS -->
 
-      <!-- 
-      Authorized users see Log Out page
-      -->
+      <!--  Authorized users see Log Out page -->
 
 
 <!-- <div > -->
@@ -91,7 +87,7 @@
       <div class="form-control">
          
          <label for="phone" class="inputBox">Phone</label>
-         <p class="inform">Use an phone number like *777222666, use only 
+         <p class="inform">Use an phone number like *777111222, use only 
             digits, maximum 9 digits</p>
          <input type="number" 
          name="phone" 
