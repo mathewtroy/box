@@ -17,12 +17,12 @@
         <div><h1>About</h1></div>
       </div>
 
-      <section class="about">
-
-         <h2>Add smth about me</h2>
-
-         TODO
-
+      <section class="about content">
+         <h2 >About Me</h2>
+         <p>My name is Aleksandr.</p>
+         <p>I am currently studying Computer Science at the Czech Technical University in Prague, with a focus on Software Engineering.</p>
+         <p>I have a keen interest in both frontend and backend development, actively engaging in learning and exploring the comprehensive field of software development.</p>
+         <p>This project was created as part of my Bachelor's thesis.</p>
       </section>
 
       <?php require "inc/_footer.php" ?>
