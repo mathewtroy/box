@@ -66,13 +66,24 @@ if ($commentIsSent) {
         </div>
 
         <section class="review">
+        <!-- For non-users -->
+        <!--  Unauthorized users see Login page , Register Page -->
+        <?php if (!isset($_SESSION['user_name']) && !isset($_SESSION['admin_name']) ): ?>
 
-            <?php if (isset($_SESSION['user_name']) || isset($_SESSION['admin_name']) ): ?>
+            <p class="nonuser">If you want to leave a review, 
+                log into your account.
+            </p>
+            <?php else:?>
 
-            <!-- Import register form from PHP file -->
+        <!-- For USERS -->
+
+            <!--  Authorized users see Log Out page -->
+
+            <!-- Import review form from PHP file -->
             <?php require "../views/review_form.php" ?>
 
-            <?php endif; ?>   
+            <?php endif; ?>  
+             
 
         </section>
 
