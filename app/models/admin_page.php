@@ -19,8 +19,7 @@ if(!isset($_SESSION['admin_name'])){
    <body>
       <div class="container">
          <div class="content">
-               <h3>Hi, <span>admin</span></h3>
-               <h1>Welcome <span><?php echo $_SESSION['admin_name'] ?></span></h1>
+               <h2>Welcome, <span><?php echo $_SESSION['admin_name'] ?></span></h2>
                <p>This is an admin page</p>
 
                <a href="../models/home.php">Home</a>
