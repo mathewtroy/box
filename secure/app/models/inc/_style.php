@@ -17,3 +17,6 @@
 
    <!-- Media queries  -->
    <link rel="stylesheet" href="/<?= CSS_URL ?>media.css">  
+
+   <!-- Custom js file link  -->
+   <script src="/<?= JS_URL ?>script.js"></script>
