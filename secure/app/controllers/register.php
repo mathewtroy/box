@@ -51,7 +51,7 @@ if($formIsSent) {
             && $validateNameMin && $validateNameMax && $validateNamePattern
             && $validateEmailAll && $validatePasswordMin && $validatePasswordMax)) {
          
-            $insert = "INSERT INTO user_form(login, firstname, email, password, user_type) 
+            $insert = "INSERT INTO users(login, firstname, email, password, user_type) 
             VALUES('$login','$firstname','$email','$hashed_password','$user_type')";
 
             mysqli_query($conn, $insert);
