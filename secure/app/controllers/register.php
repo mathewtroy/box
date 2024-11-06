@@ -19,8 +19,8 @@ if($formIsSent) {
    
    $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
 
-   $select = " SELECT * FROM user_form WHERE email = '$email' ";
-   $select_login = " SELECT * FROM user_form WHERE login = '$login' ";
+   $select = " SELECT * FROM users WHERE email = '$email' ";
+   $select_login = " SELECT * FROM users WHERE login = '$login' ";
    $result = mysqli_query($conn, $select);
    $result_login = mysqli_query($conn, $select_login);
 

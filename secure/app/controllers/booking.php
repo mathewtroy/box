@@ -26,7 +26,7 @@ if($bookFormIsSent) {
    && $validateEmailBookPattern && $validateStartPhone) {
       // everything is OK, I can work with data
       // perhaps create a new user in the DB
-      $request = " INSERT INTO book_form(name_b, email_b, phone, reservation) 
+      $request = " INSERT INTO bookings(name_b, email_b, phone, reservation) 
       VALUES('$name_b','$email_b','$phone','$reservation') ";
       mysqli_query($conn, $request);
 

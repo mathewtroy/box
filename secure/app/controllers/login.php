@@ -11,10 +11,10 @@ if($loginFormIsSent) {
    $pass = ($_POST['password']);
 
    // take login from Database
-   $select = " SELECT * FROM user_form WHERE login = '$login' ";
+   $select = " SELECT * FROM users WHERE login = '$login' ";
 
    // take password from Database
-   $select_password = " SELECT * FROM user_form WHERE password = '$pass' ";
+   $select_password = " SELECT * FROM users WHERE password = '$pass' ";
 
    // check True или False (login) 
    $result_login = mysqli_query($conn, $select);
