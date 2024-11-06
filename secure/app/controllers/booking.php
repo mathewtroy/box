@@ -64,14 +64,6 @@ if($bookFormIsSent) {
          <div><h1>Booking</h1></div>
       </div>
 
-      <!-- <section class="home">
-
-         <h2>Boxing is not just a sport it is a way of life</h2>
-
-
-
-      </section> -->
-
       <!-- Import booking section from PHP file -->
       <?php require "../views/booking_form.php" ?>
 

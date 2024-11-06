@@ -72,7 +72,7 @@ if($loginFormIsSent) {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>login form</title>
+      <title>Login form</title>
       <?php require "../models/inc/_style.php" ?>
    </head>
 
@@ -80,9 +80,6 @@ if($loginFormIsSent) {
       
       <!-- Import login form from PHP file -->
       <?php require "../views/login_form.php" ?>
-
-      <!-- Validate Login + Ajax Suggestion form JS-file -->
-      <script src="../<?=JS_URL?>login.js"></script>
 
    </body>
 </html>

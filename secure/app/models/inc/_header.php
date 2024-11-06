@@ -3,7 +3,7 @@
 <section class="header">
 
    <a href="../models/home.php" class="logo"> 
-      <img src="/<?= IMAGES_URL ?>BoxingIcon.svg" alt="BoxingIcon">
+      <img src="/secure/public/images/BoxingIcon.svg" alt="BoxingIcon">
    </a>
             
    <nav class="navbar">

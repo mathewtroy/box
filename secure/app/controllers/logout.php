@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require '../db/config.php';
 
 session_unset();

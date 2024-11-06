@@ -10,13 +10,13 @@
 
 
    <!-- Custom main css file link  -->
-   <link rel="stylesheet" href="/<?= CSS_URL ?>style.css"> 
+   <link rel="stylesheet" href="/secure/public/css/style.css"> 
 
    <!-- Custom footer css file link  -->
-   <link rel="stylesheet" href="/<?= CSS_URL ?>style-footer.css">
+   <link rel="stylesheet" href="/secure/public/css/style-footer.css">
 
    <!-- Media queries  -->
-   <link rel="stylesheet" href="/<?= CSS_URL ?>media.css">  
+   <link rel="stylesheet" href="/secure/public/css/media.css">  
 
    <!-- Custom js file link  -->
-   <script src="/<?= JS_URL ?>script.js"></script>
+   <script src="/secure/public/js/script.js"></script>

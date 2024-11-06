@@ -28,27 +28,27 @@
 
             <div class="boxing">
                <div class="image">
-                  <img src="/<?= IMAGES_URL ?>ali.jpg" alt="Ali8">
+                  <img src="/secure/public/images/ali.jpg" alt="Ali8">
 
                </div>
             </div>
 
             <div class="boxing">
                <div class="image">
-                  <img src="/<?= IMAGES_URL ?>ali-2.jpg" alt="Ali">
+                  <img src="/secure/public/images/ali-2.jpg" alt="Ali">
 
                </div>
             </div>
 
             <div class="boxing">
                <div class="image">
-                  <img src="/<?= IMAGES_URL ?>ali-3.jpg" alt="Ali">
+                  <img src="/secure/public/images/ali-3.jpg" alt="Ali">
                </div>
             </div>
 
             <div class="boxing">
                <div class="image">
-                  <img src="/<?= IMAGES_URL ?>ali-4.jpg" alt="Ali">
+                  <img src="/secure/public/images/ali-4.jpg" alt="Ali">
                </div>
             </div>
 
