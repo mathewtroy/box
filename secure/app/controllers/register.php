@@ -83,8 +83,5 @@ if($formIsSent) {
    <body>
          <!-- Import register form from PHP file -->
          <?php require "../views/register_form.php" ?>
-
-         <!-- Validate Registration form JS-file -->
-         <script src="../<?=JS_URL?>register.js"></script>
    </body>
 </html>

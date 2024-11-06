@@ -48,7 +48,7 @@ if($bookFormIsSent) {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Booking</title>
+      <title>booking</title>
 
       <!-- Import CSS section from PHP file -->
       <?php require "../models/inc/_style.php" ?>
