@@ -6,13 +6,12 @@ require "../models/lib/validate_comment.php";
 if (isset($_POST['delete_comment'])) {
     $comment_id = $_POST['comment_id'];
 
-    // Удаление комментария из базы данных
+    // Delete comments from Database
     $delete_sql = "DELETE FROM comments WHERE comment_id = ?";
     $stmt = $conn->prepare($delete_sql);
     $stmt->bind_param("i", $comment_id);
     $stmt->execute();
 
-    // Перенаправление на страницу после удаления
     header("Location: ../controllers/review.php");
     exit();
 }
