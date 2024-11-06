@@ -2,7 +2,7 @@
 
 <section class="header">
 
-   <a href="../models/home.php" class="logo"> 
+   <a href="/vulnerable/app/models/home.php" class="logo"> 
       <img src="/secure/public/images/BoxingIcon.svg" alt="BoxingIcon">
    </a>
             
