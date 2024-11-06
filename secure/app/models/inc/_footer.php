@@ -64,9 +64,6 @@
         &copy; 2024. All rights reserved! 
     </div>
 
-    <!-- custom js file link  -->
-    <script src="/<?=JS_URL?>script.js"></script>
-
 </section>
 
 <!-- Footer section ends -->
