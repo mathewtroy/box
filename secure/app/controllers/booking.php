@@ -30,7 +30,7 @@ if($bookFormIsSent) {
       VALUES('$name_b','$email_b','$phone','$reservation') ";
       mysqli_query($conn, $request);
 
-      header('location:book.php');
+      header('location:../controllers/booking.php');
    } else {
          // error, I stop at the form and display errors
    }
