@@ -415,7 +415,7 @@ label {
 
 .form-container form p a{
     font-size: 1.8rem;
-    color:#024f02;
+    color: var(--azure);
 }
 
 .form-container form .error-msg{
@@ -431,12 +431,6 @@ label {
 .form-control span {
     font-size: 150%;
     color: red;
-    font-weight: bold;
-}
-
-.form-control span#txtHint.ajax {
-    font-size: 100%;
-    color: green;
     font-weight: bold;
 }
 

@@ -2,9 +2,17 @@
 
 <section class="header">
 
-   <a href="/secure/app/models/home.php" class="logo"> 
-      <img src="/secure/public/images/BoxingIcon.svg" alt="BoxingIcon">
-   </a>
+   <?php if (!isset($_SESSION['user_name']) && !isset($_SESSION['admin_name'])): ?>
+      <!-- Logo for unauthorized users -->
+      <a href="/secure/public/index.php" class="logo"> 
+         <img src="/secure/public/images/Vulnerable.svg" alt="Vulnerable">
+      </a>
+   <?php else: ?>
+      <!-- Logo for authorized users -->
+      <a href="../models/home.php" class="logo">
+         <img src="/secure/public/images/BoxingIcon.svg" alt="BoxingIcon">
+      </a>
+   <?php endif; ?>
             
    <nav class="navbar">
       <a href="../models/home.php">Home</a>
