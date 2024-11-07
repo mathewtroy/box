@@ -29,7 +29,7 @@ if($loginFormIsSent) {
    if( $num == 1) {
 
       while ($row = mysqli_fetch_assoc($result_login)) {
-         if (password_verify($pass, $row['password'])){
+         if ($pass == $row['password']) {
             $login = true;
 
             if($row['user_type'] == 'admin') {
@@ -39,7 +39,6 @@ if($loginFormIsSent) {
             } elseif($row['user_type'] == 'user') {
                $_SESSION['user_name'] = $row['firstname'];
                header('location:../models/user_page.php');
-               
             }
          }
          if ( $num_pass != 1) { $error = 'Incorrect Password!'; }

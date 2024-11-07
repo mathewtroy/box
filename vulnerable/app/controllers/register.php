@@ -15,7 +15,7 @@ if($formIsSent) {
    $cpass = $_POST['cpassword'];
    $user_type = $_POST['user_type'];
    
-   $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
+   // $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
 
    $select = " SELECT * FROM users WHERE email = '$email' ";
    $select_login = " SELECT * FROM users WHERE login = '$login' ";
@@ -37,7 +37,10 @@ if($formIsSent) {
       } else {
          
          $insert = "INSERT INTO users(login, firstname, email, password, user_type) 
-         VALUES('$login','$firstname','$email','$hashed_password','$user_type')";
+                    VALUES('$login', '$firstname', '$email', '$pass', '$user_type')";
+
+         // $insert = "INSERT INTO users(login, firstname, email, password, user_type) 
+         // VALUES('$login','$firstname','$email','$hashed_password','$user_type')";
 
          mysqli_query($conn, $insert);
          // everything is OK, I can work with data
