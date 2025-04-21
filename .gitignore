@@ -18,6 +18,7 @@ __pycache__/
 .cache/
 __pycache__
 reports/
+build/
 
 # Node.js
 node_modules/
