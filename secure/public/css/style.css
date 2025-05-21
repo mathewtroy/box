@@ -1,0 +1,562 @@
+/* Main CSS file */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+   --main-color:#5d1f78;
+   --black:#222;
+   --white:#fff;
+   --azure:#2d94cf;
+   --light-black:#777;
+   --light-white:#fff9;
+   --dark-bg:rgba(0, 0, 0, 0.8);
+   --light-bg:#fff;
+   --border:.1rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.15);
+   --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+*{
+   font-family: 'Poppins', Helvetica, sans-serif;
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+   outline: none; 
+   border: none;
+   text-decoration: none;
+   text-transform: none;
+}
+
+html {
+   font-size: 62%;
+   overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+   width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+   background-color: var(--white); 
+}
+
+html::-webkit-scrollbar-thumb {
+   background-color: var(--main-color);   
+}
+
+section {
+   padding:5rem 10%; 
+}
+
+@keyframes fadeIn {
+   0% {
+      transform: scale(0);
+      opacity: 0;
+   }
+}
+
+
+/*---------------------------------------------------------------------
+   Header style   
+*/
+
+.btn {
+    display: inline-block;
+    background: var(--black);  
+    margin-top: 20pt; 
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;  
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: var(--main-color);
+}
+
+.header {
+    position: sticky;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    background-color: var(--white);  
+    display: flex;
+    padding-top: 12pt; 
+    padding-bottom: 12pt;   
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;    
+    color: var(--black);
+    font-weight: bold;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+ 
+
+/*---------------------------------------------------------------------
+   Home style
+*/
+
+h2 {
+   color:var(--main-color);
+   font-size: 3rem;
+   padding-bottom: 2rem;
+   text-align: center;
+} 
+
+h1 {
+   font-size: 9rem;
+   text-transform: uppercase;
+   text-shadow: var(--text-shadow);
+   color: var(--white);
+   -webkit-text-stroke: 3px rgb(246, 172, 14);
+   -webkit-text-fill-color: rgb(2, 11, 41);
+   text-align: center;
+}
+
+.home .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap: 2rem;
+}
+
+.home .box-container .boxing img {
+   width: 110%;
+   height: 110%;
+   object-fit: cover;
+   transform: scale(1.1); 
+}
+
+.home .box-container .boxing:hover img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transform: scale(0.95); 
+   border:var(--border);
+   border-radius: 2px;
+}
+
+.home .box-container .boxing .image {
+   height: 30rem;
+   overflow: hidden;
+}
+
+.home .box-container .boxing:nth-child(1),
+.home .box-container .boxing:nth-child(2),
+.home .box-container .boxing:nth-child(3),
+.home .box-container .boxing:nth-child(4) {
+   display: inline-block;
+}
+
+
+/*---------------------------------------------------------------------
+   About style
+*/
+
+.about.content {
+    flex:1 1 40rem;
+    text-align: center;
+}
+
+.about.content h2 {
+    font-size: 18pt;
+    color:var(--black);
+    text-transform: none;
+}
+
+.about.content p {
+    font-size: 14pt;
+    color:var(--light-black);
+    line-height: 2;
+    padding:1rem 0;
+}
+
+
+/*---------------------------------------------------------------------
+   Review style
+*/
+
+.review p.nonuser {
+    font-size: 2.5rem;
+    text-align: center;
+    color:var(--azure);
+    line-height: 2;
+    padding:1rem 0;
+    font-weight: bold;
+}
+
+.comments {
+    text-align: center;
+    padding: 2rem;
+}
+
+textarea {
+    border: 2px solid;
+    resize: none;
+    word-break: break-all;
+}
+
+h2.comments{
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+.content {
+    text-align: center;
+}
+
+.content p {
+    word-wrap: break-word;
+    font-weight: bold;
+    padding: 1.5rem;
+}
+
+h4.date-name {
+    color: green;
+    font-size: 2.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.sender-name {
+    color: var(--dark-green);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+}
+
+p.message-name {
+    color: var(--azure);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+
+/*---------------------------------------------------------------------
+   Booking style
+*/
+
+.booking h2 {
+    color:var(--black);
+}
+
+.booking p.nonuser {
+    font-size: 2.5rem;
+    text-align: center;
+    color:var(--azure);
+    line-height: 2;
+    padding:1rem 0;
+    font-weight: bold;
+}
+
+.booking .book-form{
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--light-bg); 
+    width: 380px;
+}
+
+.booking .book-form .form-control {
+    flex-wrap: wrap;
+    gap:2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+label.inputBox {
+    width:380px;
+    text-align: center; 
+}
+
+.form-container input {
+    width: 380px;
+    background: #eee;
+    padding:1rem 1rem; 
+    font-size: 1.6rem;
+    color:var(--black);
+    margin-top: 10pt;  
+} 
+
+.form-control p {
+    font-size: 2rem;
+    font-weight: bold;
+    color:rgb(2, 11, 41);
+}
+
+.form-container .btn {
+    background: #ffe5b4;
+    color:#080300;
+    font-weight: bold;
+    margin-top: 30pt; 
+    font-size: 2rem;
+}
+
+.form-container :hover.btn {
+    background: #00551c;
+    font-weight: bold;
+    color: var(--white);
+    font-size: 2rem;
+}
+ 
+
+/*---------------------------------------------------------------------
+    Form container style
+*/
+ 
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    padding-bottom: 60px;
+    background: #eee;
+}
+
+.form-container form {
+    padding:20px;
+    border-radius: 20px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+    background: #fff;
+    text-align: center;
+    width: 500px;
+}
+
+.form-container form h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color:#333;
+}
+
+label {
+    /* display: inline; */
+    font-weight: bold;
+    color:rgb(58, 5, 155);
+    /* width: 100%; */
+    /* padding:10px 15px; */
+    font-size: 17px;
+    margin:8px 0;
+    border-radius: 2px;
+}
+ 
+ 
+/*---------------------------------------------------------------------
+    Login style
+*/
+ 
+.form-container form input {
+    width: 95%;
+    padding:10px 15px;
+    font-size: 17px;
+    margin:10px 0;
+    background: #eeeeee;
+    border-radius: 10px;
+}
+
+.form-container form select{
+    width: 95%;
+    padding:10px 15px;
+    font-size: 17px;
+    margin:10px 0;
+    background: #eee;
+    border-radius: 10px;
+}
+
+.form-container form select option{
+    background: rgb(255, 255, 255);
+}
+
+.form-container form .form-btn{
+    background: #ffe5b4;
+    color:#080300;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+    font-weight: bold;
+    background: #00551c;
+    color:#fff;
+}
+
+.form-container form p.inform{
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--azure);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form-container form p.redirect{
+    margin-top: 10px;
+    color:rgb(6, 4, 64);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form-container form p a{
+    font-size: 1.8rem;
+    color: var(--azure);
+}
+
+.form-container form .error-msg{
+    margin:10px 0;
+    display: block;
+    background: crimson;
+    color:#fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding:10px;
+}
+
+.form-control span {
+    font-size: 150%;
+    color: red;
+    font-weight: bold;
+}
+
+.form-control input:focus {
+    outline: 0;
+}
+
+.form-control.success input {
+    border-color: #09c372;
+}
+
+.form-control.error input {
+    border-color: #ff3860;
+}
+
+.form-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+
+
+/*---------------------------------------------------------------------
+   Users personal page style
+*/
+
+.container{
+    background: #eee;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    padding-bottom: 60px;
+}
+
+.container .content{
+    text-align: center;
+}
+
+.container .content h3{
+    font-size: 30px;
+    color:#333;
+}
+
+.container .content h3 span{
+    background: rgb(70, 30, 70);
+    color:#fff;
+    border-radius: 5px;
+    padding:0 15px;
+}
+
+.container .content h1{
+    font-size: 50px;
+    color:#333;
+}
+
+.container .content h1 span{
+    color:rgb(70, 30, 70);
+}
+
+.container .content p{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.container .content a {
+    display: block; 
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(70, 30, 70);
+    margin: 10px 0; 
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container .content a:hover {
+    color: #333; 
+    font-weight: bold;
+    text-decoration: underline; 
+}
+
+.container .content .btn{
+    display: inline-block;
+    padding:10px 30px;
+    font-size: 20px;
+    background: #ffe5b4;
+    color:#080300;
+    margin:0 5px;
+    text-transform: capitalize;
+}
+
+.container .content .btn:hover{
+    background: #00551c;
+    font-weight: bold;
+    color: var(--white);
+    font-size: 2rem;
+}
+  
+.users {
+    text-align: center;
+}
+
+.delete-button {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 40px; 
+}
+
+#delete_comment{
+    display: inline-block;
+    padding:10px 30px;
+    font-size: 20px;
+    background: #ffe5b4;
+    color:#080300;
+    margin:0 5px;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+#delete_comment:hover {
+    background: #00551c;
+    font-weight: bold;
+    color: var(--white);
+    font-size: 2rem;
+    border-radius: 10px;
+}
